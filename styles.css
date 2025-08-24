@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+nav.transparent {
+  background-color: transparent;
+  color: white;
+}
+
+/* After scroll */
+nav.scrolled {
+  background-color: black; /* Bootstrap blue */
+  color: white;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: solid 1px #aaa;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a[aria-current='page'] {
+  color: #000;
+  background-color: #d4d4d4;
+}
+.navbar-toggler {
+  border: none;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.Hero {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    /* black shade */
+      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJ4mOxeWqi555QqtHRYwNY-tsqnY7DcVDlQ&s')
+      center/cover no-repeat;
+  color: white;
+  height: 300px;
+}
+.Content {
+  display: inline-block;
+  width: 100%;
+  margin-top: 80px;
+  color: white;
+}
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+.founder {
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* Timeline line */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ddd;
+  z-index: 1;
+}
+
+.timeline li {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.timeline .circle {
+  width: 14px;
+  height: 14px;
+  background: #000;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.timeline .active .circle {
+  width: 20px;
+  height: 20px;
+  background: #e63946; /* Red active */
+}
+
+.timeline .active span {
+  color: #e63946;
+  font-weight: bold;
+}
+.fade-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-content.show {
+  opacity: 1;
+}
+/* Footer Styling */
+footer {
+  background-color: #000;
+}
+footer,
+li a {
+  color: rgba(245, 245, 245, 0.82);
+  text-decoration: none;
+}
+footer,
+li a:hover {
+  color: rgba(245, 245, 245, 0.984);
+  text-decoration: none;
+}
+footer,
+h6 {
+  color: whitesmoke;
+}
+.display-3 {
+  font-family: 'Sanchez', serif;
+}
+.mini-footer {
+  color: whitesmoke !important;
+}
+
+/* wave styling */
+.wave-section {
+  position: relative;
+  background: transparent;
+  color: #fff;
+  padding: 140px 20px 100px;
+  text-align: start;
+  overflow: hidden;
+}
+
+/* Janus logo style */
+.brand-logo {
+  font-size: 48px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: inline;
+}
+.brand-logo span {
+  color: #ff3c00; /* highlight color */
+}
+
+.brand-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.highlight {
+  color: red;
+}
+
+/* Wave background at top */
+.wave-section::before {
+  content: '';
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  z-index: -1;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236e1c00" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,42.7C640,75,800,149,960,154.7C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>')
+    no-repeat;
+  background-size: cover;
+}
+.wave {
+  position: relative;
+  bottom: -90px;
+}
+/* Counter Styling */
+.counter-section {
+  background: linear-gradient(to right, #5c0d00, #8b1e00);
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+.counter-box {
+  padding: 20px;
+}
+.counter-box i {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: whitesmoke;
+}
+.counter-box h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.counter-box p {
+  font-size: 16px;
+  margin: 0;
+}
+/* vertical powerhouse styling */
+.vertical-section {
+  background: #e5e3e3;
+  padding: 60px 20px;
+}
+.vertical-section h6 {
+  color: #d32f2f;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.vertical-section h2 {
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+.vertical-card {
+  background: #dcd8d8;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.vertical-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 18px 28px rgba(0, 0, 0, 0.1);
+}
+.vertical-card img {
+  height: 40px;
+  margin-bottom: 15px;
+}
+.vertical-card p {
+  font-size: 15px;
+  color: #555;
+}
+.learn-more {
+  color: #d32f2f;
+  font-weight: 600;
+  text-decoration: none;
+}
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 439px) {
+  /* Footer Styling */
+  footer {
+    background-color: #000;
+  }
+  footer,
+  li a {
+    color: rgba(245, 245, 245, 0.82);
+    text-decoration: none;
+  }
+  footer,
+  li a:hover {
+    color: rgba(245, 245, 245, 0.984);
+    text-decoration: none;
+  }
+  footer,
+  h6 {
+    color: whitesmoke;
+  }
+  .display-3 {
+    font-family: 'Sanchez', serif;
+  }
+  .mini-footer {
+    color: whitesmoke !important;
+  }
+
+  /* wave styling */
+  .wave-section {
+    position: relative;
+    background: transparent;
+    color: #fff;
+    padding: 145px 20px 62px;
+    text-align: start;
+    overflow: hidden;
+    height: 430px;
+  }
+
+  /* Janus logo style */
+  .brand-logo {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: inline;
+  }
+  .brand-logo span {
+    color: #ff3c00; /* highlight color */
+  }
+
+  .brand-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .brand-title + p {
+    font-size: 12px;
+  }
+  .highlight {
+    color: red;
+  }
+
+  /* Wave background at top */
+  .wave-section::before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    z-index: -1;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420"><path fill="%236e1c00" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,42.7C640,75,800,149,960,154.7C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>')
+      no-repeat;
+    background-size: cover;
+  }
+  .wave {
+    position: relative;
+    bottom: -71px;
+  }
+}
